@@ -1,0 +1,41 @@
+/* 
+ * File:   Player.hpp
+ * Author: chupee
+ *
+ * Created on 8 décembre 2012, 20:42
+ * 
+ * TODO 
+ * Add textures and/or colors ?
+ * 
+ */
+
+#ifndef PLAYER_HPP
+#define	PLAYER_HPP
+
+#include <glm/glm.hpp>
+
+#include "Character.hpp"
+
+#include "imac2gl3/shapes/common.hpp"
+#include "imac2gl3/shapes/Cube.hpp"
+#include "iminecraft/cameras/FirstPersonCamera.hpp"
+
+using namespace glm;
+
+namespace iminecraft{
+    
+    class Player : public Character {
+    public:
+        Player(size_t w, size_t h);
+        Player(const Player&);
+        virtual ~Player();
+
+    private:
+        //camera
+        FirstPersonCamera m_camera;
+    };
+
+}
+
+#endif	/* PLAYER_HPP */
+
