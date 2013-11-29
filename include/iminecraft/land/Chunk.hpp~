@@ -1,0 +1,41 @@
+/*
+ * chunk.hpp
+ *
+ *  Created on: 7 déc. 2012
+ *      Author: jérémy
+ */
+
+
+#ifndef __CHUNK_H__
+#define __CHUNK_H__
+
+
+#include <fstream>
+
+#include "imac2gl3/shapes/Cube.hpp"
+
+
+namespace iminecraft {
+	
+	class Chunk {
+		private:
+			int tab[10][10][50];		
+		protected:
+		public:
+			Chunk(); // ctor init with 10x10 "1"
+			/*
+			Chunk(bool read);   // ctor calling file
+		
+																			
+			int** hydrate(char* filename); // Will fill the chunk by reading a file
+																			// Ctor an initialized object
+			*/
+			// Access element Chunk(i,j);
+			/*
+			int operator()(unsigned int x, unsigned int y);
+			*/
+	};
+	
+}
+
+#endif //__CHUNK_H__

@@ -1,0 +1,54 @@
+#ifndef _IMAC2GL3_CHARACTER_HPP_
+#define _IMAC2GL3_CHARACTER_HPP_
+
+#include <glm/glm.hpp>
+
+/*#include "imac2gl3/shapes/common.hpp"
+#include "imac2gl3/shapes/Cube.hpp"*/
+
+using namespace glm;
+//using namespace imac2gl3;
+
+namespace iminecraft{
+    
+    class Character{
+        protected:
+
+            size_t m_maxLife;
+            size_t m_currentLife;
+            float m_height;
+            float m_width;
+            vec3 m_position; /* if the character is the player, the position has to be set so that the camera is in front of his eyes */
+            vec3 m_frontVector; /* Direction of the player's sight : the same as the camera */
+            //Cube m_body; /* the body of the character, to develop ? */
+            //size_t m_jump;
+
+        public:
+            Character(size_t maxLife=10, float width=1, float height=2, vec3 position=vec3(0,0,0), size_t currentLife = 0);
+            Character(const Character&);
+            
+            void moveFront(float);
+            void moveLeft(float);
+            void gravity();
+
+            void gainLife(int);
+
+            inline size_t maxLife(){ return m_maxLife; };
+            inline size_t currentLife(){ return m_currentLife; };
+            inline float height(){ return m_height; };
+            inline float width(){ return m_width; };
+            inline vec3 position(){ return m_position; };
+            inline vec3 frontVector(){ return m_frontVector; };
+
+            inline void maxLife(size_t maxLife){ m_maxLife = maxLife; };
+            inline void currentLife(size_t curentLife){ m_currentLife = curentLife; };
+            inline void height(float h){ m_height = h; };
+            inline void width(float w){ m_width = w; };
+            inline void position(vec3 pos){ m_position = pos; };
+            inline void frontVector(vec3 dir){ m_frontVector = dir; };
+
+            virtual ~Character();
+    };
+}
+
+#endif
