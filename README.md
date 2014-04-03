@@ -1,16 +1,20 @@
-Iminecraft est un projet openGL réalisé par 5 étudiants de l'école d'ingénieur IMAC durant l'année 2012.
+Iminecraft
+==========
 
-Développé en C++, l'objectif était de proposer en 2 mois de travail un Minecraft-like, en respectant les éléments clés du jeu original (génération du terrain, monde uniquement constitué de blocs...). 
+Student project - realized in 2012 at IMAC, a school of engineering in computer science.
 
-Nous avons utilisé notamment la SDL, ainsi qu'openGL3.
+Contributors : 
+     - Julie Pronzac
+     - Clément Champetier
+     - Jérémy Ta
+     - Régis Broage
+     - Florent Fouchier
 
-Pour lancer le jeu, placez vous à la racine du projet, et lancer le fichier Makfile depuis votre terminal.
-	$ make
-(le jeu est uniquement disponible sous Linux)
+Using C++, SDL and OpenGL 3 librairies.
 
-Auteurs :
-	- Julie Pronzac
-	- Clément Champetier
-	- Jérémy Ta
-	- Régis Broage
-	- Florent Fouchier
+Run :
+  - make
+  - ./bin/iMineCraft
+
+(only available on Linux)
+
